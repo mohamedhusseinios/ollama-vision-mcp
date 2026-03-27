@@ -8,12 +8,29 @@ A Model Context Protocol (MCP) server that provides powerful computer vision cap
 - **Privacy First**: Your images never leave your computer
 - **Multiple Vision Models**: Support for llava-phi3, llava:7b, llava:13b, and bakllava
 - **Comprehensive Tools**:
-  - `analyze_image` - Custom image analysis with optional prompts
+  - `analyze_image` - Custom image analysis with optional prompts and model selection
   - `describe_image` - Detailed image descriptions
   - `identify_objects` - Object detection and listing
   - `read_text` - Text extraction from images (OCR-like capabilities)
+  - `compare_images` - Compare two images for differences/similarities (NEW in v2.0)
+  - `batch_analyze` - Analyze multiple images with the same prompt (NEW in v2.0)
+  - `detect_objects_with_boxes` - Object detection with location descriptions (EXPERIMENTAL)
+- **MCP Resources**:
+  - `models://list` - List available vision models
+  - `status://health` - Server health check
+  - `config://current` - Current configuration
+- **MCP Prompts**:
+  - `analyze_workflow` - Guided image analysis workflow
+  - `compare_workflow` - Side-by-side comparison workflow
+  - `batch_workflow` - Batch processing workflow
+- **Enhanced Features** (v2.0):
+  - Response caching with TTL for faster repeated analyses
+  - Exponential backoff retry for resilient API calls
+  - Progress reporting for batch operations
+  - Custom exceptions for better error handling
 - **Flexible Input**: Supports local files, URLs, and base64 encoded images
 - **Cross-Platform**: Works on Windows, macOS, and Linux
+- **Python 3.10+**: Modern Python with type hints
 
 ## 📋 Prerequisites
 
